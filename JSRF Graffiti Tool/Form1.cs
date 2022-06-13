@@ -61,12 +61,23 @@ namespace JSRF_Graffiti_Tool
             if (tex_dir == "") { MessageBox.Show("Error: \"JSRF TEX folder in Settings is not defined, please select the folder."); tabControl1.SelectedIndex = 1; return; }
             if (!Directory.Exists(tex_dir)) { MessageBox.Show("Media\\Mark\\TEX\\  Directory not found.\nPlease make sure you have set the proper JSRF path\nand that JSRF files are in place."); return; }
             
+
             // search .grf grafitti files of a certain size
-            string[] files = Directory.GetFiles(txtb_jsrf_mod_dir.Text.TrimEnd(Path.DirectorySeparatorChar), "grf_" + size.ToString() + "_*.grf");
+            string[] files_grf = Directory.GetFiles(txtb_jsrf_mod_dir.Text.TrimEnd(Path.DirectorySeparatorChar), "grf_" + size.ToString() + "_*.grf");
+            string[] files_sai = Directory.GetFiles(txtb_jsrf_mod_dir.Text.TrimEnd(Path.DirectorySeparatorChar), "sai_" + "0" + size.ToString() + "_*.grf");
+            string[] files_rpolice = Directory.GetFiles(txtb_jsrf_mod_dir.Text.TrimEnd(Path.DirectorySeparatorChar), "rpolice_" + "0" + size.ToString() + "_*.grf");
+            List<string> grf = new List<string>(files_grf);
+            List<string> sai = new List<string>(files_sai);
+            List<string> rpolice = new List<string>(files_rpolice);
 
-            if (files.Length == 0) { MessageBox.Show("No graffiti files found."); return; }
+            List<string> graffiti = new List<string>();
+            graffiti.AddRange(grf);
+            graffiti.AddRange(sai);
+            graffiti.AddRange(rpolice);
 
-            foreach (var file in files)
+            if (graffiti.Count == 0) { MessageBox.Show("No graffiti files found."); return; }
+
+            foreach (var file in graffiti)
             {
                 Graffiti_PicBox picbox = load_image_to_graffitiPicBox(file);
                 if(picbox != null)
@@ -81,7 +92,7 @@ namespace JSRF_Graffiti_Tool
             Graffiti_PicBox PicBox = new Graffiti_PicBox();
             string filename = Path.GetFileNameWithoutExtension(filepath);
             // make sure its a graffiti file
-            if (!filename.Contains("grf_")) { return null; }
+           // if (!filename.Contains("grf_") || !filename.Contains("sai_") || !filename.Contains("rpolice_")) { return null; }
 
             int size = Convert.ToInt16(filename.Split('_')[1]);
 
