@@ -1,0 +1,11 @@
+C:\Users\Mike\Documents\GitHub\JSRF_Graffiti_Tool\JSRF Graffiti Tool\bin\Debug\JSRF Graffiti Tool.exe
+C:\Users\Mike\Documents\GitHub\JSRF_Graffiti_Tool\JSRF Graffiti Tool\bin\Debug\JSRF Graffiti Tool.pdb
+C:\Users\Mike\Documents\GitHub\JSRF_Graffiti_Tool\JSRF Graffiti Tool\obj\Debug\JSRF Graffiti Tool.csproj.AssemblyReference.cache
+C:\Users\Mike\Documents\GitHub\JSRF_Graffiti_Tool\JSRF Graffiti Tool\obj\Debug\JSRF Graffiti Tool.csproj.SuggestedBindingRedirects.cache
+C:\Users\Mike\Documents\GitHub\JSRF_Graffiti_Tool\JSRF Graffiti Tool\obj\Debug\JSRF_Graffiti_Tool.Form1.resources
+C:\Users\Mike\Documents\GitHub\JSRF_Graffiti_Tool\JSRF Graffiti Tool\obj\Debug\JSRF_Graffiti_Tool.Libs.Graffiti_PicBox.resources
+C:\Users\Mike\Documents\GitHub\JSRF_Graffiti_Tool\JSRF Graffiti Tool\obj\Debug\JSRF_Graffiti_Tool.Properties.Resources.resources
+C:\Users\Mike\Documents\GitHub\JSRF_Graffiti_Tool\JSRF Graffiti Tool\obj\Debug\JSRF Graffiti Tool.csproj.GenerateResource.cache
+C:\Users\Mike\Documents\GitHub\JSRF_Graffiti_Tool\JSRF Graffiti Tool\obj\Debug\JSRF Graffiti Tool.csproj.CoreCompileInputs.cache
+C:\Users\Mike\Documents\GitHub\JSRF_Graffiti_Tool\JSRF Graffiti Tool\obj\Debug\JSRF Graffiti Tool.exe
+C:\Users\Mike\Documents\GitHub\JSRF_Graffiti_Tool\JSRF Graffiti Tool\obj\Debug\JSRF Graffiti Tool.pdb
