@@ -263,6 +263,8 @@ namespace JSRF_Graffiti_Tool
             if (filepath == "") { return; }
             if (!File.Exists(filepath)) { MessageBox.Show("Could not find file: \n" + filepath); return; }
 
+            clear_cxbx_cache();
+
             int size = Convert.ToInt16(Path.GetFileNameWithoutExtension(filepath).Split('_')[1]);
 
 
@@ -525,6 +527,42 @@ namespace JSRF_Graffiti_Tool
 
         #endregion
 
+        #region cxbx
+
+        private void btn_sel_cxbx_dir_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string path = folderBrowserDialog1.SelectedPath;
+
+                txtb_cxbx_dir.Text = path + "\\";
+            }
+        }
+
+        private void clear_cxbx_cache()
+        {
+            // clear cache (for PC platform cxbx)
+            if (Directory.Exists(txtb_cxbx_dir.Text))
+            {
+                Libs.IO.delete_dir_contents(txtb_cxbx_dir.Text + "EmuDisk\\Partition2\\");
+                Libs.IO.delete_dir_contents(txtb_cxbx_dir.Text + "EmuDisk\\Partition3\\");
+                Libs.IO.delete_dir_contents(txtb_cxbx_dir.Text + "EmuDisk\\Partition4\\");
+                Libs.IO.delete_dir_contents(txtb_cxbx_dir.Text + "EmuDisk\\Partition5\\");
+                Libs.IO.delete_dir_contents(txtb_cxbx_dir.Text + "EmuDisk\\Partition6\\");
+                Libs.IO.delete_dir_contents(txtb_cxbx_dir.Text + "EmuDisk\\Partition7\\");
+
+                string cxbx_roaming = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Cxbx-Reloaded\\";
+
+                Libs.IO.delete_dir_contents(cxbx_roaming + "EmuDisk\\Partition2\\");
+                Libs.IO.delete_dir_contents(cxbx_roaming + "EmuDisk\\Partition3\\");
+                Libs.IO.delete_dir_contents(cxbx_roaming + "EmuDisk\\Partition4\\");
+                Libs.IO.delete_dir_contents(cxbx_roaming + "EmuDisk\\Partition5\\");
+                Libs.IO.delete_dir_contents(cxbx_roaming + "EmuDisk\\Partition6\\");
+                Libs.IO.delete_dir_contents(cxbx_roaming + "EmuDisk\\Partition7\\");
+            }
+        }
+
+        #endregion
 
         #region network / FTP
 
@@ -817,5 +855,6 @@ namespace JSRF_Graffiti_Tool
         }
 
         #endregion
+
     }
 }

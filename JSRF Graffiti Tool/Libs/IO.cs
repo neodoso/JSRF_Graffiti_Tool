@@ -10,6 +10,72 @@ namespace JSRF_Graffiti_Tool.Libs
 {
     class IO
     {
+        // TODO this doesn't seem to work, says file is locked, when in fact, it's not
+        public static bool IsFileLocked(string filepath)
+        {
+            try
+            {
+                FileInfo file = new FileInfo(filepath);
+                using (FileStream stream = file.Open(FileMode.Open, FileAccess.Read, FileShare.None))
+                {
+                    stream.Close();
+                }
+            }
+            catch (IOException)
+            {
+                // ex because file might be: still being written, used by another process, or doesn't exist
+                return true;
+            }
+
+            // file is not locked
+            return false;
+        }
+
+
+        /// <summary>
+        /// create directory if it doesn't exist
+        /// </summary>
+        /// <param name="_dir"></param>
+        public static void create_dir(string _dir)
+        {
+            try
+            {
+                if (!Directory.Exists(_dir))
+                {
+                    Directory.CreateDirectory(_dir);
+                }
+            }
+            catch { }
+        }
+
+        /// <summary>
+        /// deletes directory's content (files and folders recursively)
+        /// </summary>
+        /// <param name="_dir"></param>
+        public static void delete_dir_contents(string _dir)
+        {
+            if (!Directory.Exists(_dir)) { return; }
+            System.IO.DirectoryInfo di = new DirectoryInfo(_dir);
+
+            foreach (FileInfo file in di.GetFiles())
+            {
+                try
+                {
+                    file.Delete();
+                }
+                catch { }
+
+            }
+            foreach (DirectoryInfo dir in di.GetDirectories())
+            {
+                try
+                {
+                    dir.Delete(true);
+                }
+                catch { }
+
+            }
+        }
 
         //converts long paths to short paths, for "dos" console commands
         [DllImport("kernel32.dll", CharSet = CharSet.Auto)]
@@ -132,35 +198,6 @@ namespace JSRF_Graffiti_Tool.Libs
             return true;
         }
 
-        // checks if file is being used by another process
-        public static bool IsFileLocked(string filepath)
-        {
-            // if (File.Exists(filepath)) { System.Windows.Forms.MessageBox.Show("File does not exist: \n" + filepath); return true; }
-            FileInfo file = new FileInfo(filepath);
-
-            FileStream stream = null;
-
-            try
-            {
-                stream = file.Open(FileMode.Open, FileAccess.ReadWrite, FileShare.None);
-            }
-            catch (IOException)
-            {
-                //the file is unavailable because it is:
-                //still being written to
-                //or being processed by another thread
-                //or does not exist (has already been processed)
-                return true;
-            }
-            finally
-            {
-                if (stream != null)
-                    stream.Close();
-            }
-
-            //file is not locked
-            return false;
-        }
 
     }
 }

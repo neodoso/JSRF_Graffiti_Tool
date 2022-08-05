@@ -70,6 +70,9 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.txtb_cxbx_dir = new System.Windows.Forms.TextBox();
+            this.btn_sel_cxbx_dir = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -84,7 +87,7 @@
             // 
             this.txtb_xbox_debug_ip.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtb_xbox_debug_ip.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtb_xbox_debug_ip.Location = new System.Drawing.Point(16, 209);
+            this.txtb_xbox_debug_ip.Location = new System.Drawing.Point(16, 235);
             this.txtb_xbox_debug_ip.Name = "txtb_xbox_debug_ip";
             this.txtb_xbox_debug_ip.Size = new System.Drawing.Size(104, 20);
             this.txtb_xbox_debug_ip.TabIndex = 32;
@@ -94,7 +97,7 @@
             // 
             this.txtb_xbox_jsrf_dir.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtb_xbox_jsrf_dir.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtb_xbox_jsrf_dir.Location = new System.Drawing.Point(10, 265);
+            this.txtb_xbox_jsrf_dir.Location = new System.Drawing.Point(10, 291);
             this.txtb_xbox_jsrf_dir.Name = "txtb_xbox_jsrf_dir";
             this.txtb_xbox_jsrf_dir.Size = new System.Drawing.Size(518, 20);
             this.txtb_xbox_jsrf_dir.TabIndex = 31;
@@ -103,7 +106,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(237, 190);
+            this.label10.Location = new System.Drawing.Point(237, 216);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 13);
             this.label10.TabIndex = 35;
@@ -113,7 +116,7 @@
             // 
             this.txtb_xbox_login.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtb_xbox_login.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtb_xbox_login.Location = new System.Drawing.Point(126, 209);
+            this.txtb_xbox_login.Location = new System.Drawing.Point(126, 235);
             this.txtb_xbox_login.Name = "txtb_xbox_login";
             this.txtb_xbox_login.Size = new System.Drawing.Size(106, 20);
             this.txtb_xbox_login.TabIndex = 33;
@@ -123,7 +126,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(125, 190);
+            this.label9.Location = new System.Drawing.Point(125, 216);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(55, 13);
             this.label9.TabIndex = 36;
@@ -133,7 +136,7 @@
             // 
             this.txtb_xbox_pass.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtb_xbox_pass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtb_xbox_pass.Location = new System.Drawing.Point(238, 209);
+            this.txtb_xbox_pass.Location = new System.Drawing.Point(238, 235);
             this.txtb_xbox_pass.Name = "txtb_xbox_pass";
             this.txtb_xbox_pass.Size = new System.Drawing.Size(106, 20);
             this.txtb_xbox_pass.TabIndex = 34;
@@ -143,7 +146,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(11, 244);
+            this.label11.Location = new System.Drawing.Point(11, 270);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(263, 13);
             this.label11.TabIndex = 37;
@@ -152,7 +155,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(17, 190);
+            this.label7.Location = new System.Drawing.Point(17, 216);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 13);
             this.label7.TabIndex = 38;
@@ -163,7 +166,7 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.DimGray;
             this.panel3.Controls.Add(this.label15);
-            this.panel3.Location = new System.Drawing.Point(3, 152);
+            this.panel3.Location = new System.Drawing.Point(3, 178);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(919, 25);
             this.panel3.TabIndex = 39;
@@ -199,6 +202,9 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Controls.Add(this.txtb_cxbx_dir);
+            this.panel1.Controls.Add(this.btn_sel_cxbx_dir);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtb_img_editor_path);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.btn_img_editor);
@@ -228,7 +234,7 @@
             // 
             this.txtb_img_editor_path.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtb_img_editor_path.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtb_img_editor_path.Location = new System.Drawing.Point(10, 360);
+            this.txtb_img_editor_path.Location = new System.Drawing.Point(10, 386);
             this.txtb_img_editor_path.Name = "txtb_img_editor_path";
             this.txtb_img_editor_path.Size = new System.Drawing.Size(518, 20);
             this.txtb_img_editor_path.TabIndex = 49;
@@ -237,7 +243,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 344);
+            this.label8.Location = new System.Drawing.Point(9, 370);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(463, 13);
             this.label8.TabIndex = 47;
@@ -247,7 +253,7 @@
             // btn_img_editor
             // 
             this.btn_img_editor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_img_editor.Location = new System.Drawing.Point(535, 359);
+            this.btn_img_editor.Location = new System.Drawing.Point(535, 385);
             this.btn_img_editor.Name = "btn_img_editor";
             this.btn_img_editor.Size = new System.Drawing.Size(112, 23);
             this.btn_img_editor.TabIndex = 48;
@@ -260,7 +266,7 @@
             this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.BackColor = System.Drawing.Color.DimGray;
             this.panel8.Controls.Add(this.label14);
-            this.panel8.Location = new System.Drawing.Point(1, 304);
+            this.panel8.Location = new System.Drawing.Point(1, 330);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(925, 25);
             this.panel8.TabIndex = 50;
@@ -281,7 +287,7 @@
             // 
             this.txtb_jsrf_original_dir.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtb_jsrf_original_dir.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtb_jsrf_original_dir.Location = new System.Drawing.Point(10, 115);
+            this.txtb_jsrf_original_dir.Location = new System.Drawing.Point(10, 97);
             this.txtb_jsrf_original_dir.Name = "txtb_jsrf_original_dir";
             this.txtb_jsrf_original_dir.Size = new System.Drawing.Size(518, 20);
             this.txtb_jsrf_original_dir.TabIndex = 42;
@@ -312,7 +318,7 @@
             // btn_jsrf_original_dir
             // 
             this.btn_jsrf_original_dir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_jsrf_original_dir.Location = new System.Drawing.Point(535, 114);
+            this.btn_jsrf_original_dir.Location = new System.Drawing.Point(535, 96);
             this.btn_jsrf_original_dir.Name = "btn_jsrf_original_dir";
             this.btn_jsrf_original_dir.Size = new System.Drawing.Size(112, 23);
             this.btn_jsrf_original_dir.TabIndex = 40;
@@ -324,7 +330,7 @@
             // 
             this.txtb_jsrf_mod_dir.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtb_jsrf_mod_dir.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtb_jsrf_mod_dir.Location = new System.Drawing.Point(10, 55);
+            this.txtb_jsrf_mod_dir.Location = new System.Drawing.Point(10, 49);
             this.txtb_jsrf_mod_dir.Name = "txtb_jsrf_mod_dir";
             this.txtb_jsrf_mod_dir.Size = new System.Drawing.Size(518, 20);
             this.txtb_jsrf_mod_dir.TabIndex = 43;
@@ -333,7 +339,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(11, 97);
+            this.label12.Location = new System.Drawing.Point(11, 79);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(223, 13);
             this.label12.TabIndex = 44;
@@ -342,7 +348,7 @@
             // btn_jsrf_mod_dir
             // 
             this.btn_jsrf_mod_dir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_jsrf_mod_dir.Location = new System.Drawing.Point(535, 54);
+            this.btn_jsrf_mod_dir.Location = new System.Drawing.Point(535, 48);
             this.btn_jsrf_mod_dir.Name = "btn_jsrf_mod_dir";
             this.btn_jsrf_mod_dir.Size = new System.Drawing.Size(112, 23);
             this.btn_jsrf_mod_dir.TabIndex = 41;
@@ -353,7 +359,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 39);
+            this.label1.Location = new System.Drawing.Point(11, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(213, 13);
             this.label1.TabIndex = 45;
@@ -539,6 +545,35 @@
             // 
             this.openFileDialog1.DefaultExt = "exe";
             // 
+            // txtb_cxbx_dir
+            // 
+            this.txtb_cxbx_dir.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtb_cxbx_dir.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtb_cxbx_dir.Location = new System.Drawing.Point(8, 146);
+            this.txtb_cxbx_dir.Name = "txtb_cxbx_dir";
+            this.txtb_cxbx_dir.Size = new System.Drawing.Size(518, 20);
+            this.txtb_cxbx_dir.TabIndex = 52;
+            // 
+            // btn_sel_cxbx_dir
+            // 
+            this.btn_sel_cxbx_dir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_sel_cxbx_dir.Location = new System.Drawing.Point(533, 145);
+            this.btn_sel_cxbx_dir.Name = "btn_sel_cxbx_dir";
+            this.btn_sel_cxbx_dir.Size = new System.Drawing.Size(112, 23);
+            this.btn_sel_cxbx_dir.TabIndex = 51;
+            this.btn_sel_cxbx_dir.Text = "Select Folder";
+            this.btn_sel_cxbx_dir.UseVisualStyleBackColor = true;
+            this.btn_sel_cxbx_dir.Click += new System.EventHandler(this.btn_sel_cxbx_dir_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 128);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(223, 13);
+            this.label2.TabIndex = 53;
+            this.label2.Text = "Cxbx folder (optional, used to clear the cache)";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -614,6 +649,9 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button btn_restore;
+        public System.Windows.Forms.TextBox txtb_cxbx_dir;
+        private System.Windows.Forms.Button btn_sel_cxbx_dir;
+        private System.Windows.Forms.Label label2;
     }
 }
 
